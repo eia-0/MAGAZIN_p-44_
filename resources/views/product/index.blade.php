@@ -8,8 +8,10 @@
 </head>
 <body>
     <h1>КаталогТоваров</h1>
+        <a href="{{route('products.create')}}">Создать продукт</a>
     <div class="container">
         @foreach($products as $product)
+        <a href="{{route('products.show', $product->id)}}">
             <div class="card">
                 <p>{{$product->name}}</p>
                 <p>{{$product->description}}</p>
@@ -23,6 +25,7 @@
                 </form>
                 <hr>
             </div>
+        </a>
         @endforeach
     </div>
 </body>

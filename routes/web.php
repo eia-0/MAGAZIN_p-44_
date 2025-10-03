@@ -26,3 +26,9 @@ Route::get('/contacts', [TestController::class, 'contacts'])->name('contacts');
 Route::get('/products',[ProductController::class,'index'])->name('products.index');
 
 Route::delete('/products/{product}', [ProductController::class, 'destroy']) -> name('products.destroy');
+
+Route::get('/products/{product}', [ProductController::class,'show']) -> name('products.show');
+
+Route::get('/create',[ProductController::class,'create'])->name('products.create');
+
+Route::post('/products',[ProductController::class,'store'])->name('products.store');
