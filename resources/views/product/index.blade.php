@@ -17,6 +17,7 @@
                 <p>{{$product->description}}</p>
                 <p>Цена: {{$product->price}} &#8381</p>
                 
+                <p>Категория: {{$product->category}}</p>
                 
                 <form method="POST" action="{{route('products.destroy', $product->id)}}">
                     @csrf
